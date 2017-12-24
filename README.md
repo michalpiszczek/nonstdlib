@@ -2,7 +2,7 @@
 
 ## About
 
-`nonstdlib` is a library of thread-safe data structures for Go. 
+`nonstdlib` is a non-idiomatic library of thread-safe data structures for Go. 
 
 Currently, these Collections are avaiable:
     
@@ -34,9 +34,12 @@ import "github.com/michalpiszczek/libmp/collection/set"
 
 func main() {
     myNewHashSet := set.NewHashSet()
+    myNewUnsafeHashSet := set.NewHashSetUnsafe()
     ...
 }
 ```
+
+All collections support myCollection := [collection].New[Collection]() and myUnsafeCollection := [collection].New[Collection]Unsafe()
 
 Operations supported by all Collections (for details see `collection/collection.go`):
 
@@ -47,7 +50,7 @@ Operations supported by all Collections (for details see `collection/collection.
     c.InitUnsafe()       // initalizes the Collection. It will not manage its own thread-safety.
     c.Size()             // returns the number of items in the Collection
     c.Empty()            // returns true if there are no items in the Collection, false otherwise.
-    c.Map()              // applies a given function to each item in the Collection.
+    c.Map(func())              // applies a given function to each item in the Collection.
     c.Slice()            // returns a slice of the Collection
     c.Clear()            // removes all items from the Collection
     c.Copy()             // returns a copy of the Collection
@@ -64,17 +67,18 @@ Additional operations supported by all WorkLists (see `collection/worklist/workl
 ```go 
     var w WorkList
     
-    w.Push()             // pushes the given work onto the WorkList
-    w.Pop()              // pops the next item of work off the WorkList
+    w.Push(work)             // pushes the given work onto the WorkList
+    w.Pop(work)              // pops the next item of work off the WorkList
 ```
 
 Additional operations supported by all Dictionaries (see `collection/worklist/dictionary.go`):
 
 ```go 
-    var w WorkList
+    var d Dictionary
     
-    w.Push()             // pushes the given work onto the WorkList
-    w.Pop()              // pops the next item of work off the WorkList
+    d.Insert()             // pushes the given work onto the WorkList
+    d.Locate()              // pops the next item of work off the WorkList
+    d.
 ```
 
 ## Todo
