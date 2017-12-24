@@ -116,7 +116,7 @@ Additional operations supported by all Sets (details: `collection/set/set.go`):
 
 I'm fairly new to Go, but I'm loving it so far! I've got another project Going, and this library is sort of a quick detour from that.
 
-Here are some things I'm happy with:
+I'm happy with:
 
     - Struct composition! Embeding collections.Base saved a lot of work! 
     - Similarly, interface inheritance/compositon! 
@@ -125,7 +125,7 @@ Here are some things I'm happy with:
     - Testing in general. I think I've managed decent coverage so far.
     - AVL-Tree's Remove. First time implementing that. A little trickier than Insert, but not too bad.
 
-Here are some things I'd like to address at some point:
+I'd like to address:
     
     - Embeding collections.Base and using collections.Base required making some internal fields public
     - There's some issues with covariance, or lack thereof, that cause problems for Copy()
