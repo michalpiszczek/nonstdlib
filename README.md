@@ -134,6 +134,7 @@ I would like to address:
     - HashMap just wrap's Go's map (I doubt I can do better, but it'd be fun to try)
     - The thread-safety is kind of weighty
     - Everything's probably slower than it could be
+    - Benchmarking
 
 It would be cool to add:
 
