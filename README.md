@@ -40,7 +40,23 @@ func main() {
 
 Operations supported by all Collections:
 
-    - `Size()`
+```go
+    
+    Init()
+    InitUnsafe()
+    Size()
+    Empty()
+    Map()
+    Slice()
+    Clear()
+    Threadsafe()
+    Lock()
+    Unlock()
+    RLock()
+    RUnlock()
+    String()
+    
+```
 
 ## Todo
     - Skiplist
