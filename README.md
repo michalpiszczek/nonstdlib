@@ -135,6 +135,7 @@ I would like to address:
     - The thread-safety is kind of weighty
     - Everything's probably slower than it could be
     - Benchmarking
+    - Documentation
 
 It would be cool to add:
 
