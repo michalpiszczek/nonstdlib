@@ -8,14 +8,14 @@ The best way of instantiating a new Collection is through the New[CollectionName
 go get github.com/rakyll/magicmime
 ```
 
-'''golang
+```golang
     import "github.com/michalpiszczek/libmp/collection/set"
 
     func main() {
         myNewHashSet := set.NewHashSet()
         ...
     }
-'''
+```
 
 The package collection/set defines the Set interface. Sets are Collections that store unique items.
 
