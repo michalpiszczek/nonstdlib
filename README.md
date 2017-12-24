@@ -4,6 +4,10 @@ collection.go defines the interface Collection, implemented by all Collections.
 
 The best way of instantiating a new Collection is through the New[CollectionName] functions. For example:
 
+```golang
+go get github.com/rakyll/magicmime
+```
+
 '''golang
     import "github.com/michalpiszczek/libmp/collection/set"
 
