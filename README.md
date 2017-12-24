@@ -41,53 +41,102 @@ func main() {
 
 All Collections provide these convenience functions,
 
-```go
+```
 my[Collection] := [collection].New[Collection]() 
 
 myUnsafe[Collection] := [collection].New[Collection]Unsafe()
 ```
 
-Operations supported by all Collections (for details see `collection/collection.go`):
+### Summary
+
+This a summary of the operations supported by each Collection, but does not fully capture all their behavior. Please see the respective interfaces for complete details.
+
+Operations supported by all Collections (details: `collection/collection.go`):
 
 ```go
     var c Collection
     
-    c.Init()             // initalizes the Collection. It will manage its own thread-safety.
-    c.InitUnsafe()       // initalizes the Collection. It will not manage its own thread-safety.
-    c.Size()             // returns the number of items in the Collection
-    c.Empty()            // returns true if there are no items in the Collection, false otherwise.
-    c.Map(func())              // applies a given function to each item in the Collection.
-    c.Slice()            // returns a slice of the Collection
-    c.Clear()            // removes all items from the Collection
-    c.Copy()             // returns a copy of the Collection
-    c.Threadsafe()       // returns true if the Collection is thread-safe, false otherwise
-    c.Lock()             // attempts to acquire the lock on the Collection   
-    c.Unlock()           // releases the lock on the Collection
-    c.RLock()            // attempts to acquire the lock on the Collection  (for reading)
-    c.RUnlock()          // releases the lock on the Collection (for reading)
-    c.String()           // returns a string representation of the Collection
+    c.Init()             // initalizes c. It will manage its own thread-safety
+    c.InitUnsafe()       // initalizes c. It will not manage its own thread-safety
+    c.Size()             // returns the number of items in c
+    c.Empty()            // returns true if there are no items in c, false otherwise
+    c.Map(func())        // applies a given function to each item in c
+    c.Slice()            // returns a slice of c
+    c.Clear()            // removes all items from c
+    c.Copy()             // returns a copy of c
+    c.Threadsafe()       // returns true if c is thread-safe, false otherwise
+    c.Lock()             // attempts to acquire the lock on c
+    c.Unlock()           // releases the lock on c
+    c.RLock()            // attempts to acquire the lock on c (for reading)
+    c.RUnlock()          // releases the lock on c (for reading)
+    c.String()           // returns a string representation of c
 ```
 
-Additional operations supported by all WorkLists (see `collection/worklist/worklist.go`):
+Additional operations supported by all WorkLists (details: `collection/worklist/worklist.go`):
 
 ```go 
     var w WorkList
     
-    w.Push(work)             // pushes the given work onto the WorkList
-    w.Pop(work)              // pops the next item of work off the WorkList
+    w.Push(work)         // pushes the given work onto w
+    w.Pop(work)          // pops the next item of work off w
 ```
 
-Additional operations supported by all Dictionaries (see `collection/worklist/dictionary.go`):
+Additional operations supported by all Dictionaries (details: `collection/dictionary/dictionary.go`):
+
+    Note: All keys for TreeMaps must implement collections.Comparer.
 
 ```go 
     var d Dictionary
     
-    d.Insert()             // pushes the given work onto the WorkList
-    d.Locate()              // pops the next item of work off the WorkList
-    d.
+    d.Insert(key, val)    // adds val to d, associated with key
+    d.Locate(key)         // returns the value associated with key in d
+    d.Remove(key)         // removes the value associated wit key from d
+    d.Contains(...keys)   // returns true if d contains values for all keys
 ```
 
+Additional operations supported by all Sets (details: `collection/set/set.go`):
+
+    Note: All keys for TreeSets must implement collections.Comparer.
+
+```go 
+    var s Set
+    
+    s.Insert(...items)    // adds all items to s
+    s.Remove(...items)    // removes all items from s
+    s.Contains(...items)  // returns true if all items are in s
+    s.Union(Set)          // returns the union of s and the given Set
+    s.Intersection(Set)   // returns the intersection of s and the given Set
+    s.Difference(Sety)    // returns the difference of s and the given Set
+    s.Equal(Sety)         // returns true if s and the given Set are equal, false otherwise
+    s.Subset(Set)         // returns true if s is a Subset of the given Set, false otherwise
+    s.Superset(Set)       // returns true if s is a Superset of the given Set, false otherwise
+
+```
+## Implementation
+
+I'm fairly new to Go, but I'm loving it so far! I've got another project Going, and this library is sort of a quick detour from that, and as such, it hasn't had too much thought put into it. 
+
+Here are some things I'm happy with:
+
+    - Struct composition. Embeding collections.Base in all the Collections certainly saved me some work. Though, there is the downside of having to expose some fields... I really wish privacy worked differently in that regard.
+
+Here are some things I'd like to address at some point:
+
+    - There's some issues with covariance, or lack thereof, that Cause problems for Copy()
+    - Some of the interfaces could be more consistent
+    - The Comparer interface is pretty hacky
+    - HashMap just wrap's Go's map (I doubt I can do better, but it'd be fun to try)
+    - The thread-safety is kind of weighty
+    - Everythings probably slower than it could be
+
+
+
+There's a lot I'm unhappy with at the moment.
+
 ## Todo
+    - cleanup interfaces
+    - complete test coverage
+    
     - Skiplist
     - Bloomfilter
     - x-fast trie
