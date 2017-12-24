@@ -39,7 +39,15 @@ func main() {
 }
 ```
 
-All collections support myCollection := [collection].New[Collection]() and myUnsafeCollection := [collection].New[Collection]Unsafe()
+All Collections provide these functions for a getting a new one.
+
+```go
+myCollection := [collection].New[Collection]() 
+
+// and 
+
+myUnsafeCollection := [collection].New[Collection]Unsafe()
+```
 
 Operations supported by all Collections (for details see `collection/collection.go`):
 
