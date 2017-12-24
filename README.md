@@ -39,12 +39,10 @@ func main() {
 }
 ```
 
-All Collections provide these functions for a getting a new one.
+All Collections provide these convenience functions,
 
 ```go
 my[Collection] := [collection].New[Collection]() 
-
-// and 
 
 myUnsafe[Collection] := [collection].New[Collection]Unsafe()
 ```
