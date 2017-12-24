@@ -25,7 +25,7 @@ go get github.com/michalpiszczek/nonstdlib
 
 ## Usage
 
-Import and create an instance of a Collection,
+Import and create an instance of a Collection:
 
 ```golang
 import "github.com/michalpiszczek/libmp/collection/set"
@@ -37,7 +37,7 @@ func main() {
 }
 ```
 
-All Collections provide these convenience functions,
+All Collections provide these convenience functions:
 
 ```
 my[Collection] := [collection].New[Collection]() 
