@@ -49,7 +49,7 @@ myUnsafe[Collection] := [collection].New[Collection]Unsafe()
 
 This a summary of the operations supported by each Collection, but does not fully capture all their behavior. Please see the interfaces for complete details.
 
-Operations supported by all Collections (details: `collection/collection.go`):
+#### Operations supported by all Collections (details: `collection/collection.go`):
 
 ```go
     var c Collection
@@ -70,7 +70,7 @@ Operations supported by all Collections (details: `collection/collection.go`):
     c.String()           // returns a string representation of c
 ```
 
-Additional operations supported by all WorkLists (details: `collection/worklist/worklist.go`):
+#### Additional operations supported by all WorkLists (details: `collection/worklist/worklist.go`):
 
 ```go 
     var w WorkList
@@ -79,7 +79,7 @@ Additional operations supported by all WorkLists (details: `collection/worklist/
     w.Pop(work)          // pops the next item of work off w
 ```
 
-Additional operations supported by all Dictionaries (details: `collection/dictionary/dictionary.go`):
+#### Additional operations supported by all Dictionaries (details: `collection/dictionary/dictionary.go`):
 
 *Note: All keys for TreeMaps must implement collections.Comparer.*
 
@@ -92,7 +92,7 @@ Additional operations supported by all Dictionaries (details: `collection/dictio
     d.Contains(...keys)   // returns true if d contains values for all keys
 ```
 
-Additional operations supported by all Sets (details: `collection/set/set.go`):
+#### Additional operations supported by all Sets (details: `collection/set/set.go`):
 
 *Note: All keys for TreeSets must implement collections.Comparer.*
 
