@@ -1,7 +1,5 @@
 # nonstdlib
 
-## About
-
 `nonstdlib` is a non-idiomatic library of thread-safe data structures for Go. 
 
 Currently, these Collections are avaiable:
