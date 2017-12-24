@@ -4,7 +4,7 @@ collection.go defines the interface Collection, implemented by all Collections.
 
 The best way of instantiating a new Collection is through the New[CollectionName] functions. For example:
 
-'''
+'''go
     import "github.com/michalpiszczek/libmp/collection/set"
 
     func main() {
