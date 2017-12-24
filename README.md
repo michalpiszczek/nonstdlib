@@ -7,7 +7,7 @@
 Currently, these Collections are avaiable:
     
     - Worklist 
-        - Queue
+        - Queue 
         - Stack
     - Dictionary
         - HashMap (backed by Go's `map`)
@@ -38,10 +38,9 @@ func main() {
 }
 ```
 
-Operations supported by all Collections (for details, consult `collections.go`):
+Operations supported by all Collections (for details see `collection/collection.go`):
 
 ```go
-
     var c Collection
     
     c.Init()             // initalizes the Collection. It will manage its own thread-safety.
@@ -58,7 +57,24 @@ Operations supported by all Collections (for details, consult `collections.go`):
     c.RLock()            // attempts to acquire the lock on the Collection  (for reading)
     c.RUnlock()          // releases the lock on the Collection (for reading)
     c.String()           // returns a string representation of the Collection
+```
+
+Additional operations supported by all WorkLists (see `collection/worklist/worklist.go`):
+
+```go 
+    var w WorkList
     
+    w.Push()             // pushes the given work onto the WorkList
+    w.Pop()              // pops the next item of work off the WorkList
+```
+
+Additional operations supported by all Dictionaries (see `collection/worklist/dictionary.go`):
+
+```go 
+    var w WorkList
+    
+    w.Push()             // pushes the given work onto the WorkList
+    w.Pop()              // pops the next item of work off the WorkList
 ```
 
 ## Todo
