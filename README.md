@@ -81,7 +81,7 @@ This a summary of the operations supported by each Collection, but does not full
 
 #### Dictionaries (details: `collection/dictionary/dictionary.go`):
 
-*Note: All keys for TreeMaps must implement collections.Comparer.*
+**Note**: *All keys for TreeMaps must implement collections.Comparer.*
 
 ```go 
     var d Dictionary
@@ -94,7 +94,7 @@ This a summary of the operations supported by each Collection, but does not full
 
 #### Sets (details: `collection/set/set.go`):
 
-*Note: All keys for TreeSets must implement collections.Comparer.*
+**Note**: *All keys for TreeSets must implement collections.Comparer.*
 
 ```go 
     var s Set
