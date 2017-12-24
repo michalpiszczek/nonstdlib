@@ -112,7 +112,7 @@ Additional operations supported by all Sets (details: `collection/set/set.go`):
 ```
 ## Implementation
 
-I'm fairly new to Go, but I'm loving it so far! I've got another project Going, and this library is sort of a quick detour from that.
+I'm fairly new to Go, but I'm loving it so far! This library has been fun distraction from another project that I've got *Go*ing.
 
 I am happy with:
 
