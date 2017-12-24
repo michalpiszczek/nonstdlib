@@ -2,7 +2,9 @@
 
 ## About
 
-`nonstdlib` is a library of thread-safe data structures for Go. Currently, these structures are avaiable:
+`nonstdlib` is a library of thread-safe data structures for Go. 
+
+Currently, these Collections are avaiable:
     
     - Worklist 
         - Queue
@@ -25,6 +27,7 @@ go get github.com/michalpiszczek/nonstdlib
 
 ## Usage
 
+Import and create an instance of a Collection,
 
 ```golang
 import "github.com/michalpiszczek/libmp/collection/set"
@@ -34,6 +37,10 @@ func main() {
     ...
 }
 ```
+
+Operations supported by all Collections:
+
+    - `Size()`
 
 ## Todo
     - Skiplist
