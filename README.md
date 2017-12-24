@@ -47,7 +47,7 @@ myUnsafe[Collection] := [collection].New[Collection]Unsafe()
 
 ### Summary
 
-This a summary of the operations supported by each Collection, but does not fully capture all their behavior. Please see the respective interfaces for complete details.
+This a summary of the operations supported by each Collection, but does not fully capture all their behavior. Please see the interfaces for complete details.
 
 Operations supported by all Collections (details: `collection/collection.go`):
 
