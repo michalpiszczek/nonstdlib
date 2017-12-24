@@ -81,7 +81,7 @@ Additional operations supported by all WorkLists (details: `collection/worklist/
 
 Additional operations supported by all Dictionaries (details: `collection/dictionary/dictionary.go`):
 
-    Note: All keys for TreeMaps must implement collections.Comparer.
+*Note: All keys for TreeMaps must implement collections.Comparer.*
 
 ```go 
     var d Dictionary
@@ -94,7 +94,7 @@ Additional operations supported by all Dictionaries (details: `collection/dictio
 
 Additional operations supported by all Sets (details: `collection/set/set.go`):
 
-    Note: All keys for TreeSets must implement collections.Comparer.
+*Note: All keys for TreeSets must implement collections.Comparer.*
 
 ```go 
     var s Set
