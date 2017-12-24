@@ -41,21 +41,23 @@ func main() {
 Operations supported by all Collections (for details, consult `collections.go`):
 
 ```go
+
+    var c Collection
     
-    Init()                      // initalizes the Collection. It will manage its own thread-safety.
-    InitUnsafe()                // initalizes the Collection. It will not manage its own thread-safety.
-    Size()                      // returns the number of items in the Collection
-    Empty()                     // returns true if there are no items in the Collection, false otherwise.
-    Map()                       // applies a given function to each item in the Collection.
-    Slice()                     // returns a slice of the Collection
-    Clear()                     // removes all items from the Collection
-    Copy()                      // returns a copy of the Collection
-    Threadsafe()                // returns true if the Collection is thread-safe, false otherwise
-    Lock()                      
-    Unlock()
-    RLock()
-    RUnlock()
-    String()                    // returns a string representation of the Collection
+    c.Init()             // initalizes the Collection. It will manage its own thread-safety.
+    c.InitUnsafe()       // initalizes the Collection. It will not manage its own thread-safety.
+    c.Size()             // returns the number of items in the Collection
+    c.Empty()            // returns true if there are no items in the Collection, false otherwise.
+    c.Map()              // applies a given function to each item in the Collection.
+    c.Slice()            // returns a slice of the Collection
+    c.Clear()            // removes all items from the Collection
+    c.Copy()             // returns a copy of the Collection
+    c.Threadsafe()       // returns true if the Collection is thread-safe, false otherwise
+    c.Lock()             // attempts to acquire the lock on the Collection   
+    c.Unlock()           // releases the lock on the Collection
+    c.RLock()            // attempts to acquire the lock on the Collection  (for reading)
+    c.RUnlock()          // releases the lock on the Collection (for reading)
+    c.String()           // returns a string representation of the Collection
     
 ```
 
