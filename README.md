@@ -17,7 +17,7 @@ Currently, these Collections are avaiable:
 
 ## Installation
 
-First make sure you have [Go](http://golang.org) installed, then:
+Make sure you have [Go](http://golang.org) installed. Then,
 
 ```go
 go get github.com/michalpiszczek/nonstdlib
