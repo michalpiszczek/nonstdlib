@@ -119,7 +119,7 @@ This library has been a fun distraction from another project that I've got **Go*
 I am happy with:
 
     - Struct composition! Embeding collections.Base saved a lot of work! 
-    - Similarly, interface inheritance/compositon! 
+    - Similarly, interface inheritance/composition! 
     - lock.Lock(); defer lock.Unlock() is super useful!
     - I wrote a quick JUnit-esque wrapper for Go's `testing`, check it out in `nonstdlib/util/test`.
     - Testing in general. I think I've managed decent coverage so far.
