@@ -25,7 +25,7 @@ go get github.com/michalpiszczek/nonstdlib
 
 ## Usage
 
-Import and create an instance of a Collection:
+Create an instance of a Collection:
 
 ```golang
 import "github.com/michalpiszczek/libmp/collection/set"
@@ -45,9 +45,9 @@ my[Collection] := [collection].New[Collection]()
 myUnsafe[Collection] := [collection].New[Collection]Unsafe()
 ```
 
-### Summary
+### Operation Summary
 
-This a summary of the operations supported by each Collection, but does not fully capture all their behavior. Please see the interfaces for complete details.
+Please see the interfaces for complete details!
 
 #### Collections (details: `collection/collection.go`):
 
