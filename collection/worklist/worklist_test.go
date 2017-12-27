@@ -6,7 +6,8 @@ import (
 
 func TestWorklist(t *testing.T) {
 	q := NewQueue()
-	s := NewStack()
 	var _ WorkList = q
+
+    s := NewStack()
 	var _ WorkList = s
 }
