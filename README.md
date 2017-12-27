@@ -127,15 +127,15 @@ I am happy with:
 
 I would like to address:
     
-    - Embeding collections.Base and using collections.Base required making some internal fields public
-    - There's some issues with covariance, or lack thereof, that cause problems for Copy()
+    - Embeding collections.Base required making some internal fields public
+    - Issues with covariance, or lack thereof, prevent Copy() from being defined in the Collection interface
     - Some of the interfaces could be more consistent
-    - The Comparer interface is pretty hacky
+    - The Comparer interface is pretty hacky and not well docced
     - HashMap just wrap's Go's map (I doubt I can do better, but it'd be fun to try)
     - The thread-safety is kind of weighty
     - Everything's probably slower than it could be
     - Benchmarking
-    - Documentation
+    - Improve docs
 
 It would be cool to add:
 
