@@ -114,7 +114,7 @@ Please see the interfaces for complete details!
 
 I'm fairly new to Go, and I'm loving it so far! 
 
-This library has been a fun distraction from another project that I've got _**Go**ing.
+This library has been a fun distraction from another project that I've got **Go**ing.
 
 I am happy with:
 
