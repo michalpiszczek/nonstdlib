@@ -128,7 +128,7 @@ I am happy with:
 I would like to address:
     
     - Embeding collections.Base required making some internal fields public
-    - Issues with covariance, or lack thereof, prevent Copy() from being defined in the Collection interface
+    - Issues with covariance prevent Copy() from being defined in the Collection interface
     - Some of the interfaces could be more consistent
     - The Comparer interface is pretty hacky and not well docced
     - HashMap just wrap's Go's map (I doubt I can do better, but it'd be fun to try)
