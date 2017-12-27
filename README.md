@@ -88,7 +88,7 @@ Please see the interfaces for complete details!
     
     d.Insert(key, val)    // adds val to d, associated with key
     d.Locate(key)         // returns the value associated with key in d
-    d.Remove(key)         // removes the value associated wit key from d
+    d.Remove(key)         // removes the value associated with key from d
     d.Contains(...keys)   // returns true if d contains values for all keys
 ```
 
@@ -114,7 +114,7 @@ Please see the interfaces for complete details!
 
 I'm fairly new to Go, and I'm loving it so far! 
 
-This library has been a fun distraction from another project that I've got **Go**ing.
+This library has been a fun distraction from another project that I've got _**Go**ing.
 
 I am happy with:
 
