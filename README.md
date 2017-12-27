@@ -45,7 +45,7 @@ my[Collection] := [collection].New[Collection]()
 myUnsafe[Collection] := [collection].New[Collection]Unsafe()
 ```
 
-### Operation Summary
+### Method Summary
 
 Please see the interfaces for complete details!
 
