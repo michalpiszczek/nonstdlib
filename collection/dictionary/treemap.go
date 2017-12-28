@@ -353,29 +353,25 @@ func (s *TreeMap) Map(f func(item interface{}) bool) bool {
 
     q := worklist.NewStackUnsafe()
     ok := true
+    current := s.root
+    done := false
+    for !done {
+        if current != nil {
+            q.Push(current)
+            current = child(current, 0)
+        } else {
 
-    if s.root != nil {
-        q.Push(s.root)
-    }
-
-    for !q.Empty() {
-        curr := q.Pop()
-
-        currc, _ := curr.(*node)
-
-        if right := child(currc, 1); right != nil {
-            q.Push(right)
-        }
-
-        if left := child(currc, 0); left != nil {
-            q.Push(left)
-        }
-
-        if ok = f(&KeyValue{currc.K, currc.V}); !ok {
-            break
+            if !q.Empty() {
+                current, _ = q.Pop().(*node)
+                if ok = f(&KeyValue{current.K, current.V}); !ok {
+                    break
+                }
+                current = child(current, 1)
+            } else {
+                done = true
+            }
         }
     }
-
     return ok
 }
 

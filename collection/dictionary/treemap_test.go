@@ -31,6 +31,29 @@ func (m compInt) Compare(o interface{}) int {
     }
 }
 
+func TestOrdering(t *testing.T) {
+    s := NewTreeMap()
+
+    list := make([]compInt, 0)
+
+    list = append(list, compInt{1})
+    list = append(list, compInt{3})
+    list = append(list, compInt{7})
+    list = append(list, compInt{2})
+    list = append(list, compInt{5})
+
+    for _, num := range list {
+        s.Insert(num, 0)
+    }
+
+    keys := []int{1, 2, 3, 5, 7}
+    for i, kv := range *s.Slice() {
+        k, _ := kv.(*KeyValue).Key.(compInt)
+        test.AssertEqual(t, k.i, keys[i], "Items returned out of order!")
+    }
+
+}
+
 func TestNewEmptyTreeMap(t *testing.T) {
     s := NewTreeMap()
 
